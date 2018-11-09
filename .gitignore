@@ -15,6 +15,7 @@
 *.lib
 *.html
 *.exp
+*.test
 Debug/
 Obj/
 lib/

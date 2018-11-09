@@ -12,9 +12,9 @@ class Foo : public util::Singleton<Foo>
     virtual ~Foo() {}
 };
 
-SINGLETON_INIT(Foo);
+} // namespace foo
 
-}
+SINGLETON_INIT(foo::Foo);
 
 TEST(Singleton, test)
 {

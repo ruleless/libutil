@@ -17,6 +17,7 @@
 *.exp
 *.test
 Debug/
+build/
 Obj/
 lib/
 main

@@ -2,6 +2,7 @@
 #define __STRING_HELPER_H__
 
 #include "exception.h"
+#include <vector>
 #include <algorithm>
 #include <sstream>
 

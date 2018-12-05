@@ -46,3 +46,37 @@ TEST(string_helper, trim)
     str = "";
     EXPECT_STREQ(trim(str).c_str(), "");
 }
+
+TEST(string_helper, replace)
+{
+    std::string str = "abcdefg";
+    EXPECT_EQ(replace(str, "abcd", ""), 1);
+    EXPECT_STREQ(str.c_str(), "efg");
+
+    str = "abcdefg";
+    EXPECT_EQ(replace(str, "abcd", ""), 1);
+    EXPECT_STREQ(str.c_str(), "efg");
+
+    str = "xxxx    yyyy";
+    EXPECT_EQ(replace(str, " ", ""), 4);
+    EXPECT_STREQ(str.c_str(), "xxxxyyyy");
+
+    str = "xxxx    yyyy";
+    EXPECT_EQ(replace(str, "y", ""), 4);
+    EXPECT_STREQ(str.c_str(), "xxxx    ");
+}
+
+TEST(string_helper, transCase)
+{
+    std::string str = "aAbBccdDd";
+    EXPECT_STREQ(uppercase(str).c_str(), "AABBCCDDD");
+
+    str = "aAbBccdDd";
+    EXPECT_STREQ(lowercase(str).c_str(), "aabbccddd");
+}
+
+TEST(string_helper, split)
+{
+    std::vector<std::string> v;
+    EXPECT_EQ(split(std::string("a;b"), ';', v), 2);
+}

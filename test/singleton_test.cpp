@@ -1,4 +1,4 @@
-#include "src/singleton.h"
+#include "util/singleton.h"
 #include <gtest/gtest.h>
 
 using namespace std;
